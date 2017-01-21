@@ -1,0 +1,319 @@
+/*----- GENERAL AND RESET -----*/
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    margin-left: 20px;
+    padding-left: 20px;
+}
+ 
+::-webkit-scrollbar-track {
+	background: rgba(235, 235, 235, 0.5);
+	border-radius: 5px;
+}
+ 
+::-webkit-scrollbar-thumb {
+	background: rgba(0, 0, 0, 0.15);;
+	border-radius: 5px;
+}
+
+body { 
+  background: url(../images/matterhorn.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: helvetica, sans-serif;
+}
+
+::selection {
+  background: red; /* WebKit/Blink Browsers */
+  color: white;
+}
+::-moz-selection {
+  background: red; /* Gecko Browsers */
+  color: white;
+}
+
+/*----- LOADING SCREEN -----*/
+
+#load{
+	position:fixed !important;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	text-align: center;
+    z-index:9999;
+    background: white;
+}
+
+#load:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.25em; /* Adjusts for spacing */
+}
+
+#load img {
+	height: 50px;
+	vertical-align: middle;
+    -webkit-animation: pulsate 1.5s ease-out;
+    -webkit-animation-iteration-count: infinite; 
+    opacity: 0.0
+}
+
+@-webkit-keyframes pulsate {
+    0% {-webkit-transform: scale(0.1, 0.1); opacity: 0.0;}
+    50% {opacity: 1.0;}
+    100% {-webkit-transform: scale(1.2, 1.2); opacity: 0.0;}
+}
+
+/*----- CENTERING -----*/
+
+#viewport {
+	position:fixed !important;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	text-align: center;
+}
+
+#viewport:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.25em; /* Adjusts for spacing */
+}
+
+#container {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* --------------- NAV --------------- */
+
+nav {
+	float: left;
+	display: inline-block;
+}
+
+nav .button {
+	width: 150px;
+	background: red;
+	color: white;
+	text-align: left;
+	list-style: none;
+	margin-right: 4px;
+	margin-bottom: 4px;
+	text-transform: uppercase;
+	line-height: 1em;
+	font-size: 0.8em;
+	font-weight: bold;
+	padding: 12px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    letter-spacing: 2px;
+    cursor: pointer;
+    opacity: 0.97;
+    box-shadow: inset 0 0 0 0 white;
+	-webkit-transition: all ease 0.3s;
+	-moz-transition: all ease 0.3s;
+	transition: all ease 0.3s;
+}
+
+nav .button:hover {
+    box-shadow: inset -150px 0  0  0  white;
+    color: red;
+}
+
+/*----- MAIN -----*/
+
+#main {
+	height: 480px;
+	max-width: 480px;
+	display: inline-block;
+}
+
+.page {
+	max-height: 480px;
+	min-height: 167px;
+	width: 480px;
+	background: white;
+	float: right;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    opacity: 0.97;
+    overflow-y: auto;
+    border: 16px solid white;
+    text-align: left;
+}
+
+/*----- TEXT STYLING -----*/
+
+h1 {
+	font-size: 3em;
+	line-height: 1em;
+	border-bottom: 1px solid black;
+	margin-bottom: 16px;
+	text-align: left;
+}
+
+h2 {
+	font-size: 1.4em;
+	line-height: 1em;
+	border-bottom: 1px solid black;
+	margin-bottom: 12px;
+	text-align: left;
+}
+
+p {
+	text-align: justify;
+	font-size: 0.8em;
+	margin-bottom: 12px;	
+}
+
+a {
+	text-decoration: none;
+	color: red;
+}
+
+/*----- INDIVIDUAL PAGES -----*/
+
+#over, #motivatie, #curriculum, #contact {
+	display: none;  /* hides all pages but the default*/
+}
+
+/*----- HOME -----*/
+
+#home {
+	text-align: center;
+	line-height: 445px;
+}
+
+#home img {
+	height: 200px;
+	vertical-align: middle;
+	}
+
+/*----- CURRICULUM -----*/
+
+table {
+	text-align: left;
+	table-layout: fixed;
+	font-size: 0.8em;
+	margin-bottom: 12px;
+	width: 100%;
+}
+
+th {
+	width: 35%;
+	vertical-align: top;
+}
+
+td {
+	width: 65%;
+	vertical-align: top;
+}
+
+/*----- CONTACT -----*/
+
+#contacttext {
+	display: inline-block;
+	font-size: 0.8em;
+}
+
+#contactimg {
+	display: inline-block;
+	vertical-align: top;
+	margin-right: 10px;
+}
+
+#contactimg img {
+	height: 110px;
+	margin: auto;
+	vertical-align: middle;
+}
+
+#social {
+	font-size: 1.4em;
+}
+
+#social a {
+	color: black;
+}
+
+#contact i:hover {
+	color: red;
+}
+
+/*----- MEDIA QUERIES -----*/
+
+@media screen and (max-width: 720px), screen and (max-height: 500px) {
+
+	nav {
+		display: none;
+	}
+
+	#container {
+		text-align: left;
+	}
+
+	#home, #over, #motivatie, #curriculum, #contact {
+		display: block !important;  
+	}
+
+	#home {
+		line-height: 135px !important;
+	}
+
+	#home img {
+		height: 100px;
+	}
+
+	#viewport {
+		position: relative !important;
+	}
+
+	#main {
+		height: none !important;
+		margin: 15px;
+	}
+
+	.page {
+		max-height: none !important;
+		width: 100% !important;
+		max-width: 480px !important;
+		box-shadow: none !important;
+		margin-bottom: 15px !important;
+		margin-left: 50%;
+	}
+}
+
+@media screen and (max-width: 395px) {
+    
+	#contactimg img {
+		height: 90px;
+	}
+}
+
+
+@media screen and (max-width: 370px) {
+    
+	#contactimg img {
+		height: 80px;
+	}
+}
+
+@media screen and (max-width: 345px) {
+    
+	#contactimg img {
+		display: none;
+	}
+}
