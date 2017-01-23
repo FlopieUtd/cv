@@ -173,6 +173,22 @@ h2 {
 	text-align: left;
 }
 
+h3 {
+	font-size: 1.8em;
+	line-height: 1em;
+	border-bottom: 1px solid black;
+	text-transform: lowercase;	
+	padding: 4px;
+	margin-bottom: 4px;
+}
+
+h4 {
+	font-weight: normal;
+	text-transform: uppercase;
+	font-size: 0.8em;
+	letter-spacing: 4px;
+}
+
 p {
 	text-align: justify;
 	font-size: 0.8em;
@@ -194,13 +210,17 @@ a {
 
 #home {
 	text-align: center;
-	line-height: 445px;
 }
 
 #home img {
 	height: 200px;
 	vertical-align: middle;
+	margin: 60px;
 	}
+
+#titel {
+	margin-bottom: 30px;
+}
 
 /*----- CURRICULUM -----*/
 
@@ -269,12 +289,9 @@ td {
 		display: block !important;  
 	}
 
-	#home {
-		line-height: 135px !important;
-	}
-
 	#home img {
 		height: 100px;
+		margin: 30px;
 	}
 
 	#viewport {
