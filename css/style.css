@@ -303,7 +303,6 @@ td {
 	}
 }
 
-
 @media screen and (max-width: 370px) {
     
 	#contactimg img {
@@ -313,7 +312,13 @@ td {
 
 @media screen and (max-width: 345px) {
     
+	#contact {
+		text-align: center;
+	}
+
 	#contactimg img {
-		display: none;
+		display: block;
+		margin: auto;
+		margin-bottom: 10px;
 	}
 }
