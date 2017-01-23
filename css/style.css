@@ -174,7 +174,7 @@ h2 {
 }
 
 h3 {
-	font-size: 1.8em;
+	font-size: 3em;
 	line-height: 1em;
 	border-bottom: 1px solid black;
 	text-transform: lowercase;	
@@ -276,6 +276,10 @@ td {
 /*----- MEDIA QUERIES -----*/
 
 @media screen and (max-width: 720px), screen and (max-height: 500px) {
+
+	h3 {
+		font-size: 2em;
+	}
 
 	nav {
 		display: none;
